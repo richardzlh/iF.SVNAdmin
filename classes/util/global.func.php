@@ -44,6 +44,17 @@ function if_log_debug($message)
 	error_log($message);
 }
 
+//Auditing log function
+//Log file will be created by date seperatly
+//Log format: [when] [who] [did what]
+function if_audit_log($message, $operator)
+{
+	$c_date = date('Y-m-d');
+	$c_time = date('H:i:s');
+	$audit_log_file = AuditLogPath . $c_date . '.log';
+	$content = "[$c_date $c_time] [$operator] [$message]\n";
+	error_log($content, 3, $audit_log_file);
+}
 // ------------------------------------------ Global template "print" functions.
 
 function GlobalHeader()

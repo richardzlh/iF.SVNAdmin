@@ -192,6 +192,7 @@ class Engine
 	public function addMessage($message)
 	{
 		$this->m_messages[] = $message;
+		if_audit_log($message, $this->getSessionUsername());
 	}
 
 	/**

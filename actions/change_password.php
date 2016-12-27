@@ -30,7 +30,7 @@ else {
     $b = $appEngine->getUserEditProvider()->changePassword($username, $password);
     if ($b) {
       $appEngine->getUserEditProvider()->save();
-      $appEngine->addMessage(tr("The password has been changed for user [%0].", array($username)));
+      $appEngine->addMessage(tr("The password has been changed for user %0.", array($username)));
     }
     else {
       throw new Exception(tr("An unknown error occured. Check your configuration, please."));

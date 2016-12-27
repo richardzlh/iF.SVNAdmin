@@ -43,6 +43,8 @@ if (!file_exists("./data/config.ini"))
 //define("IF_HtPasswd_DefaultCrypt", "SHA1");
 //define("IF_HtPasswd_DefaultCrypt", "MD5"); // Custom Apache APR1 MD5 hash.
 
+define("AuditLogPath",		"./config/logs/");
+
 /**
  * PHP/Subversion bug workarround for:
  * Custom config-directory for subversion.

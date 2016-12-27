@@ -137,7 +137,7 @@ if (check_request_var("save"))
 			exit(0);
 		}
 
-		$appEngine->addMessage(tr("Done."));
+		$appEngine->addMessage(tr("Updated settings successfully."));
 	}
 	catch (Exception $except) {
 		$appEngine->addException($except);

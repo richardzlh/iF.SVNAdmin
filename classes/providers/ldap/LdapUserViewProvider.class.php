@@ -524,6 +524,33 @@ class LdapUserViewProvider extends \IF_AbstractLdapConnector
 	}
 
 
+	/*
+	 *         * @todo Implement real function, this is a dummy implementation by nkh
+	 *                 */
+	public function getGroupsOfSubgroup($objSubgroup)
+	{
+	    $ret = array();
+	    return $ret;
+	}
+	
+	/*
+	 *         * @todo Implement real function, this is a dummy implementation by nkh
+	 *                 */
+	public function getSubgroupsOfGroup($objGroup)
+	{
+	    $ret = array();
+	    return $ret;
+	}
+	
+	/*
+	 *         * @todo Implement real function, this is a dummy implementation by nkh
+	 *                 */
+	public function isSubgroupInGroup( $objSubgroup, $objGroup )
+	{
+	    return false;
+	}
+
+
 	/**************************************************************************
 	 * Protected helper methods.
 	 *************************************************************************/

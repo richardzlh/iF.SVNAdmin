@@ -299,7 +299,7 @@ class LdapUserViewProvider extends \IF_AbstractLdapConnector
 		{
 			$u = new \svnadmin\core\entities\User;
 			$u->id = $ldapUsers[$i]->dn;
-			$u->name = $ldapUsers[$i]->$up_name;
+			$u->name = strtolower($ldapUsers[$i]->$up_name);
 			$u->displayName = $this->formatDisplayName($this->users_display_name_format, $ldapUsers[$i]);
 			$ret[] = $u;
 		}
@@ -522,6 +522,7 @@ class LdapUserViewProvider extends \IF_AbstractLdapConnector
 
 		return true;
 	}
+
 
 	/**************************************************************************
 	 * Protected helper methods.
